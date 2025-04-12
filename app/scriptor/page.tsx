@@ -24,7 +24,7 @@ export default function ScriptorPage() {
       const data = await res.json();
       setResponse(data.reply ?? null);
       if (!data.reply) setError('⚠️ Nessuna risposta ricevuta da Scriptor.');
-    } catch (err) {
+    } catch {
       setError('❌ Errore nella comunicazione con Scriptor.');
     } finally {
       setLoading(false);

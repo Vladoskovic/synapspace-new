@@ -24,7 +24,7 @@ export default function MentryaPage() {
       const data = await res.json();
       setResponse(data.reply ?? null);
       if (!data.reply) setError('⚠️ Nessuna risposta ricevuta da Mentrya.');
-    } catch (err) {
+    } catch {
       setError('❌ Errore nella comunicazione con Mentrya.');
     } finally {
       setLoading(false);

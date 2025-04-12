@@ -24,7 +24,7 @@ export default function ChronyaPage() {
       const data = await res.json();
       setResponse(data.reply ?? null);
       if (!data.reply) setError('⚠️ Nessuna risposta ricevuta da Chronya.');
-    } catch (err) {
+    } catch {
       setError('❌ Errore nella comunicazione con Chronya.');
     } finally {
       setLoading(false);
